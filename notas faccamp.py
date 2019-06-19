@@ -21,3 +21,7 @@ print("A sua media das provas é:",y1)
 xy = x1 * y1
 xy1 = math.sqrt(xy)
 print("A sua média total é:",xy1)
+if xy1 >= 5:
+  print("Parabéns você está aprovado nesta matéria")
+else:
+  print("Errrooou você nao está aprovado nesta matéria")
