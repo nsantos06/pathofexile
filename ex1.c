@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
-
+// calcular a area de um circulo 
 int main(void) {
   const float pi = 3.14159;
   printf("Digite o raio: \n");
-  int raio = 0;
-  scanf("%i",&raio);
-  float area = pi * (raio * 2);
+  float raio = 0;
+  scanf("%f",&raio);
+  float area = pi * (raio * raio);
   printf("A area do circulo é : %f \n",area);
   return 0;
 }
