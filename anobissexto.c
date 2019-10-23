@@ -2,18 +2,18 @@
 #include <stdlib.h>
 int main(){
 	int ano,mes;
-	printf("Digite o mes respectivo ao numero: \n ");
+	printf("Digite o mes respectivo ao numero: ");
 	scanf("%d",&mes);
 	
 	printf("Digite o ano: ");
 	scanf("%d",&ano);
 		if(ano % 4==0 )
-		printf("Ano bissexto  ");
+		printf("O ano de %d e bissexto e o Mes e ",ano,mes);
 		
 		else if ((ano % 4 == 0 && ano % 100 != 0)) {
-		printf("Ano bissexto  "); 	
+		printf("O ano de %d e bissexto e o Mes e ",ano,mes); 	
 		} 
-		else printf("O ano de %d nao e bissexto e o mes e : ",ano,mes);
+		else printf("O Ano de %d Nao e bissexto e o Mes e ",ano,mes);
 
 	switch(mes){
     case 1:
@@ -53,7 +53,9 @@ int main(){
     printf("Dezembro");
     break;
     default:
-    printf("Digite um numero valido:");
+    printf("\n --- Um mes que nao foi inserido o numero corretamente, tente denovo com numeros de 1 a 12--- \n");
+    printf(" \n ---SAINDO--- \n ");
+	system("pause");
     break;
 }
 
