@@ -8,10 +8,10 @@ int main(){
 	printf("Digite o ano: ");
 	scanf("%d",&ano);
 		if(ano % 4==0 )
-		printf("O ano de %d e bissexto e o Mes e ",ano,mes);
-		
+		printf("\n O ano de %d e bissexto e o mes e ",ano,mes);
+	
 		else if ((ano % 4 == 0 && ano % 100 != 0)) {
-		printf("O ano de %d e bissexto e o Mes e ",ano,mes); 	
+		printf("\n O ano de %d e bissexto e o mes e",ano,mes); 
 		} 
 		else printf("O Ano de %d Nao e bissexto e o Mes e ",ano,mes);
 
@@ -53,11 +53,12 @@ int main(){
     printf("Dezembro");
     break;
     default:
-    printf("\n --- Um mes que nao foi inserido o numero corretamente, tente denovo com numeros de 1 a 12--- \n");
+    printf("\n um mes invalido,digite numeros de 1 a 12 \n");
     printf(" \n ---SAINDO--- \n ");
+	
 	system("pause");
     break;
 }
-
+printf("\n Se o Ano for bissexto, tera um dia a mais em fevereiro, Caso nao seja nao adicionara um dia a mais \n ");
 	return 0;
 }
