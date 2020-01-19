@@ -4,22 +4,22 @@ def soma():
     if(str(espaco.get()).isnumeric() and str(espaco2.get()) .isnumeric()):
         x = int(espaco.get())
         y = int(espaco2.get())
-        lb_resultado["text"] = x+y
+        lb_resultado1["text"] = x+y
 def sub():
      if(str(espaco.get()).isnumeric() and str(espaco2.get()) .isnumeric()):
         x = int(espaco.get())
         y = int(espaco2.get())
-        lb_resultado["text"] = x-y
+        lb_resultado1["text"] = x-y
 def multi():
     if(str(espaco.get()).isnumeric() and str(espaco2.get()) .isnumeric()):
         x = int(espaco.get())
         y = int(espaco2.get())
-        lb_resultado["text"] = x*y
+        lb_resultado1["text"] = x*y
 def div():
      if(str(espaco.get()).isnumeric() and str(espaco2.get()) .isnumeric()):
         x = int(espaco.get())
         y = int(espaco2.get())
-        lb_resultado["text"] = x/y
+        lb_resultado1["text"] = x/y
 
 begin = Tk()
 begin.title('Janela principal')
@@ -45,14 +45,14 @@ lb_espaco.place(x=630,y=120)
 lb_espaco2 = Label(begin, text='Coloque o outro numero no espaço:')
 lb_espaco2.place(x=630,y=180)
 lb_resultado = Label(begin, text='Resultado é :')
-lb_resultado.place(x=630, y=240)
+lb_resultado1 = Label(begin, text='x')
+lb_resultado.place(x=630,y=240)
+lb_resultado1.place(x=700,y=240)
         
 espaco = Entry(begin)
 espaco.place(x=650,y=150)
 espaco2 = Entry(begin)
 espaco2.place(x=650, y=210)
-resultado = Entry(begin)
-resultado.place(x=650, y=270)
         
 begin.geometry("1024x768")
         
