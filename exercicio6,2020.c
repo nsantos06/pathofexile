@@ -1,17 +1,13 @@
 #include <stdio.h>
 
 int main(void) {
-  int i;
-  for(i = 100; i<=200; i++){
-    if(i % 2 == 0 ){
-      printf("%d \n",i);
-    }
+  int c,soma = 0;
+  for(c = 100; c <= 200; c++){
     
-
+    if(c % 2 == 0){
+    soma += c;
+    }
   }
- 
-  
+  printf("%d",soma);
   return 0;
 }
-
-
