@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 int main(void) {
-  int i;
-  for(i = 1; i<=18; i++){
-    printf("%d \n",i);
-
+  int c,soma = 0;
+  for(c = 1; c <= 18; c++){
+  soma += c;
+    
   }
- 
-  
+  printf("%d",soma);
   return 0;
 }
-
