@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+/* Exercicio 3
+*/
 int main(void) {
   int k,carteira;
   float vmulta,multa;
@@ -25,5 +26,31 @@ int main(void) {
 
 
 
+  return 0;
+}
+/* Exercicio 5
+*/
+
+#include <stdio.h>
+
+int main(void) {
+  int a0,r,n;
+  int contador,termo,sn;
+  printf("Digite o numero(ponto de começo), a razao(intervalo), e n(qtd de elementos): \n");
+  scanf("%d %d %d",&a0,&r,&n);
+  
+  contador = 0;
+  
+  while(contador<n){
+  termo = a0 + contador * r;
+  sn = r * (a0 + n) / 2;
+  printf("Os termos são: %d \n",termo);
+  contador++;
+ 
+  
+  
+  }
+  
+  printf("\n");
   return 0;
 }
