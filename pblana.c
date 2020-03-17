@@ -60,5 +60,28 @@ printf("\n");
 
   return 0;
 }
+/* Exercicio 4
+*/
 
 
+#include <stdio.h> 
+#include <stdlib.h>
+
+int main(){
+  int k,j,n;
+  for(k = 0; k<10; k++){
+  printf("Digite 10 numeros:");
+  scanf("%d",&n);
+  j = n * n;
+  if(n>0){
+    printf("O quadrado do numero é: %d",j);
+  }
+  else if (n>0){
+    printf("Numero invalido");
+  }
+  }
+
+
+
+  return 0; 
+}
