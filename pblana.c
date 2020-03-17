@@ -44,9 +44,15 @@ int main(void) {
   while(contador<n){
   termo = a0 + contador * r;
   sn = r * (a0 + n) / 2;
-  printf("Os termos são: %d \n",termo);
-  contador++;
- 
+  if(a0 == (a0 -1) + r){
+     printf("É uma PA,Os termos são: %d \n",termo);
+     contador++;
+  }
+  else{
+    printf("Não é uma PA");
+    break;
+  } 
+   
   
   
   }
