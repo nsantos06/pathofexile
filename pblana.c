@@ -34,29 +34,28 @@ int main(void) {
 #include <stdio.h>
 
 int main(void) {
-  int a0,r,n;
-  int contador,termo,sn;
-  printf("Digite o numero(ponto de começo), a razao(intervalo), e n(qtd de elementos): \n");
-  scanf("%d %d %d",&a0,&r,&n);
-  
-  contador = 0;
-  
-  while(contador<n){
-  termo = a0 + contador * r;
-  sn = r * (a0 + n) / 2;
-  if(a0 == (a0 -1) + r){
-     printf("É uma PA,Os termos são: %d \n",termo);
-     contador++;
+int a0,razao,n;
+int cont,termo,sn;
+
+printf("Digite a posição inicial,o intervalo, e a quantidade: \n");
+scanf("%d %d %d",&a0,&razao,&n);
+cont = 0;
+while(cont<n){
+  termo = a0 + cont * razao;
+  sn = razao * (a0 + n) / 2;
+  if(termo - razao != razao){
+    printf("São P.A e os termos são: %d \n",termo);
+    cont++;
   }
   else{
-    printf("Não é uma PA");
+    printf("Não é uma P.A");
     break;
-  } 
-   
-  
-  
   }
-  
-  printf("\n");
+
+}
+printf("\n");
+
+
   return 0;
 }
+
