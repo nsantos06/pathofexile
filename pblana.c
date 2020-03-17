@@ -33,6 +33,8 @@ int main(void) {
 
 #include <stdio.h>
 
+#include <stdio.h>
+
 int main(void) {
 int a0,razao,n;
 int cont,termo,sn;
@@ -40,10 +42,10 @@ int cont,termo,sn;
 printf("Digite a posição inicial,o intervalo, e a quantidade: \n");
 scanf("%d %d %d",&a0,&razao,&n);
 cont = 0;
-while(cont<n){
+while(cont<=n){
   termo = a0 + cont * razao;
   sn = razao * (a0 + n) / 2;
-  if(termo - razao != razao){
+  if((sn - razao)/2 != razao){
     printf("São P.A e os termos são: %d \n",termo);
     cont++;
   }
@@ -58,4 +60,5 @@ printf("\n");
 
   return 0;
 }
+
 
