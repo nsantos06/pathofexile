@@ -64,24 +64,18 @@ printf("\n");
 */
 
 
-#include <stdio.h> 
-#include <stdlib.h>
+#include <stdio.h>
 
-int main(){
-  int k,j,n;
-  for(k = 0; k<10; k++){
-  printf("Digite 10 numeros:");
-  scanf("%d",&n);
-  j = n * n;
-  if(n>0){
-    printf("O quadrado do numero é: %d",j);
-  }
-  else if (n>0){
-    printf("Numero invalido");
-  }
-  }
+int main(void) {
+  int i, k;
+  int vetor[k];
+  
+  printf("digite um natural positivo:\n");
+  scanf("%d",&k);
 
-
-
-  return 0; 
+  for(i = 0; i<k; i++){
+    scanf ("%d",vetor);
+ }
+ 
+  return 0;
 }
