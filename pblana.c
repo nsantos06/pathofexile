@@ -33,31 +33,25 @@ int main(void) {
 
 #include <stdio.h>
 
-#include <stdio.h>
 
 int main(void) {
-int a0,razao,n;
-int cont,termo,sn;
+  int c,k=0,j;
+  int soma = 0;
 
-printf("Digite a posição inicial,o intervalo, e a quantidade: \n");
-scanf("%d %d %d",&a0,&razao,&n);
-cont = 0;
-while(cont<=n){
-  termo = a0 + cont * razao;
-  sn = razao * (a0 + n) / 2;
-  if((sn - razao)/2 != razao){
-    printf("São P.A e os termos são: %d \n",termo);
-    cont++;
+  printf("Digite qnts vezes vai repetir:");
+  scanf("%d",&j);
+  
+  for(c = 0 ; c<j; c++){
+  printf("Digite os numeros:");
+  scanf("%d",&k);
+  soma += k;
   }
-  else{
-    printf("Não é uma P.A");
-    break;
-  }
+if(k == soma - (j-1)){
+  printf("é uma PA.");
+}else printf("Não é uma pa \n");
 
-}
-printf("\n");
-
-
+printf("%d \n",soma);
+  
   return 0;
 }
 /* Exercicio 4
