@@ -67,15 +67,17 @@ printf("\n");
 #include <stdio.h>
 
 int main(void) {
-  int i, k;
-  int vetor[k];
-  
-  printf("digite um natural positivo:\n");
-  scanf("%d",&k);
-
-  for(i = 0; i<k; i++){
-    scanf ("%d",vetor);
- }
- 
+  int k,n,j=1;
+  for(k=0;k<10;k++){
+    printf("Digite 10 numeros:");
+    scanf("%d",&n);
+    j = n* n;
+    if(n>0){
+      printf("O quadrado do numero é: %d \n",j);
+    }
+    else if (n<0){
+      printf("O numero não vai ser contado \n");
+    }
+  }
   return 0;
 }
