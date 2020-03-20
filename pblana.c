@@ -33,32 +33,23 @@ int main(void) {
 
 #include <stdio.h>
 
-
-#include <stdio.h>
-#include <stdbool.h>
-int main(void) {
-
-printf("Digite Qnts vezes vc quer repetir:");
-int rep,j,k;
-scanf("%d",&rep);
-int guardar[100] = {};
-int soma = 0;
-for(k = 0; k<rep; k++){
-  printf("Escolhe os numeros da sequencia:");
-  scanf("%d",&j);
-  guardar[k] = j;
-  soma = guardar[k] - guardar[k-1];
-}
-
-for( k = 0; k<rep; k++){
-  printf("[%d] \n",guardar[k]);
-}
-int dif = guardar[k+1] - guardar[k];
-if(soma == dif){
-  printf("é pa");
-}else printf("não é pa");
-
-
+int main(){
+  int K, r;
+  int a = 1;
+  printf("Digite qnt vezes vai repetir:");
+  scanf("%i", &K);
+  int V[K];
+  for(int i = 0; i < K; i++){
+     scanf("%i", &V[i]);
+  }
+  r = V[1] - V[0];
+  for(int i = 2; i < K; i++){
+    if(V[i] != V[0] + (i*r)){
+      a = 0;
+    }
+  }
+  if(a == 1) printf("Eh PA\n");
+  else printf("Nao eh PA\n");
   return 0;
 }
 /* Exercicio 4
