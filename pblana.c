@@ -30,21 +30,21 @@ int main(void) {
 }
 /* Exercicio 5
 */
-
 #include <stdio.h>
 
 int main(){
-  int K, r;
+  int K, razao;
   int a = 1;
   printf("Digite qnt vezes vai repetir:");
   scanf("%i", &K);
-  int V[K];
+  int Vetor[K];
   for(int i = 0; i < K; i++){
-     scanf("%i", &V[i]);
+     printf("Digite os numeros:");
+     scanf("%i", &Vetor[i]);
   }
-  r = V[1] - V[0];
+  razao = Vetor[1] - Vetor[0];
   for(int i = 2; i < K; i++){
-    if(V[i] != V[0] + (i*r)){
+    if(Vetor[i] != Vetor[0] + (i*razao)){
       a = 0;
     }
   }
