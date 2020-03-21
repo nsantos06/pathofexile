@@ -53,8 +53,8 @@ int main(){
       a = 0;
     }
   }
-  if(a == 1) printf("Eh PA\n");
-  else printf("Nao eh PA\n");
+  if(a == 1) printf("é Progressao Aritmetica \n");
+  else printf("Não é Progressao Aritmetica \n");
   return 0;
 }
 /* Exercicio 4
