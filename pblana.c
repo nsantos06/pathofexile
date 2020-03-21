@@ -29,7 +29,7 @@ int main(){
       totalgeral += total;
 }
 printf("Numero da carteira com maior numero é %d \n",mcarteira);
-printf("Valor total arrecadado %3.f R$: \n",totalgeral);
+printf("Valor total arrecadado R$: %3.f  \n",totalgeral);
 
 return 0;
 }
