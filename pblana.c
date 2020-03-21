@@ -1,32 +1,37 @@
 #include <stdio.h>
 /* Exercicio 3
 */
-int main(void) {
-  int k,carteira;
-  float vmulta,multa;
-  float soma = 0; float soma2 = 0;
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+  int c,carteira,nmulta,mcarteira,mnmult;
+  float valor,total,totalgeral;
+  mnmult = 0;
+  totalgeral = 0;
+  printf("Digite a carteira do motorista ou 0 pra finalizar: \n");
+  scanf("%d",&carteira);
+  while(carteira != 0){
+    total = 0;
+    printf("Escreva o numero de multas: \n");
+    scanf("%d",&nmulta);
+    for(c = 1; c <= nmulta; c++){
+      printf("Digita o Valor da multa: \n");
+      scanf("%f",&valor);
+      total += valor;
+    }if(nmulta > mnmult){
+      mnmult = nmulta;
+      mcarteira = carteira;
+      }
+      printf("Carteira de motorista %d: \n ",carteira);
+      printf("Valor a pagar %f \n",total);
+      printf("Digite a carteira ou 0 pra acabar o programa: \n");
+      scanf("%d",&carteira);
+      totalgeral += total;
+}
+printf("Numero da carteira com maior numero é %d \n",mcarteira);
+printf("Valor total arrecadado %3.f R$: \n",totalgeral);
 
-  for(k = 0; k<2; k++){
-    printf("Digite o Numero da carteira de motorista:");
-    scanf("%d",&carteira);
-
-    printf("Digite quantas multas:");
-    scanf("%f",&multa);
-
-    printf("Digite o valor da multa:");
-    scanf("%f",&vmulta);
-
-    soma = multa * vmulta;
-    printf("O valor das multas são %.2f \n",soma);
-
-    soma2 += soma;
-    printf("Todas as multas somadas são: %.2f \n",soma2);
-
-  }
-
-
-
-  return 0;
+return 0;
 }
 /* Exercicio 5
 */
