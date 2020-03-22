@@ -28,7 +28,7 @@ int main(){
       scanf("%d",&carteira);
       totalgeral += total;
 }
-printf("Numero da carteira com maior numero é %d \n",mcarteira);
+printf("Numero da carteira com maior numero de multas é %d \n",mcarteira);
 printf("Valor total arrecadado R$: %3.f  \n",totalgeral);
 
 return 0;
