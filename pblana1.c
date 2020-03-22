@@ -17,25 +17,25 @@ int main(void) {
 
   switch(type){
     do{
-      case 1:{
-      cont++;
-      tcont = qtd * 0.3;
-      printf("O Id do consumidor é:%d \n e o tipo de consumidor:%d \n e de preço: R$%2.f \n",type,n,tcont);
-      soma += tcont;
-      break;}
+    case 1:{
+    cont++;
+    tcont = qtd * 0.3;
+    printf("O Id do consumidor é:%d \n e o tipo de consumidor:%d \n e de preço: R$%2.f \n",type,n,tcont);
+    soma += tcont;
+    break;}
 
-      case 2:{
-      cont++;
-      tcont = qtd * 0.5;
-      printf("O Id do consumidor é:%d e tipo de consumidor:%d e de preço: R$%2.f \n",type,n,tcont);
-      soma += tcont;
-      break;}
+    case 2:{
+    cont++;
+    tcont = qtd * 0.5;
+    printf("O Id do consumidor é:%d \n e tipo de consumidor:%d \n e de preço: R$%2.f \n",type,n,tcont);
+    soma += tcont;
+    break;}
 
-      case 3:{
-      cont++;
-      tcont = qtd * 0.7;
-      printf("O Id do consumidor é :%d e tipo de consumidor:%d e de preço: R$%2.f \n",type,n,tcont);
-      break;}
+    case 3:{
+    cont++;
+    tcont = qtd * 0.7;
+    printf("O Id do consumidor é :%d e \n tipo de consumidor:%d \n e de preço: R$%2.f \n",type,n,tcont);
+    break;}
     }while(type == 0);
   {
   total += tcont;
