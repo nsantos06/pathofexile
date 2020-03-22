@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+
 int main(void) {
   float tcont,media;
   int n,qtd,type,total=0,soma=0,cont=0;
-  clrscr();
+ 
   
-  printf("digite o numero:");
+  printf("Digite o Id do consumidor:\n");
   scanf("%d",&n);
 
-  printf("digite a qtd:");
+  printf("Digite a qtd em kWh: \n");
   scanf("%d",&qtd);
 
-  printf("digite o tipo 1 res, 2 comercial, 3 inds");
+  printf("Digite o tipo 1 residencial, 2 comercial, 3 industrial:\n");
   scanf("%d",&type);
 
   switch(type){
@@ -20,38 +20,38 @@ int main(void) {
       case 1:{
       cont++;
       tcont = qtd * 0.3;
-      printf("o tipo de consumidor: %d e de %2.f",n,tcont);
+      printf("O Id do consumidor é:%d \n e o tipo de consumidor:%d \n e de preço: R$%2.f \n",type,n,tcont);
       soma += tcont;
       break;}
 
       case 2:{
       cont++;
       tcont = qtd * 0.5;
-      printf("o tipo de consumidor %d e de %2.f",n,tcont);
+      printf("O Id do consumidor é:%d e tipo de consumidor:%d e de preço: R$%2.f \n",type,n,tcont);
       soma += tcont;
       break;}
 
       case 3:{
       cont++;
       tcont = qtd * 0.7;
-      printf("o tipo de consumidor %d e de %2.f",n,tcont);
+      printf("O Id do consumidor é :%d e tipo de consumidor:%d e de preço: R$%2.f \n",type,n,tcont);
       break;}
     }while(type == 0);
-  }
+  {
   total += tcont;
-  printf("digite o numero:");
+  printf("Digite o Id do consumidor: \n");
   scanf("%d",&n);
-  printf("digite a qtd:");
+  printf("Digite a qtd: \n");
   scanf("%d",&qtd);
+  printf("digite o tipo de consumidor 1 res 2 comercial: \n");
+  scanf("%d",&type);
+  
 
-
-
-    }
-
-
-
-
-  }
+  media = soma/cont;
+  printf("Total de consumo é de: %d kWh \n", total);
+  printf("Media de consumidor 1 e 2: %3.f \n",media);
+}
+}
   
   return 0;
 }
