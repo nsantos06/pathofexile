@@ -38,3 +38,23 @@ scanf("%d",&votos);
 printf("%d \n",n);
   return 0;
 }
+
+
+#include <stdio.h>
+
+int main(void) {
+  int i,base,exp;
+  
+  printf("Digite a base:");
+  scanf("%d",&base);
+  int nresult = base;
+  printf("Digite o expoente:");
+  scanf("%d",&exp);
+
+  for(i = 1; i<exp; i++){
+    nresult = nresult * base;
+
+  }
+  printf("%d",nresult);
+  return 0;
+}
