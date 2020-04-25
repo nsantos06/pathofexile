@@ -1,44 +1,49 @@
 #include <stdio.h>
 
 int main(void) {
- int votos,vt;
- int n,i,contvotos=0;
- 
-printf("Quantas vezes vai votar?:");
-scanf("%d",&i);
-
-printf("Digite em quem quer votar (1,2,3 ou 4):");
-scanf("%d",&votos);
-
- 
- for(n = 0; n<i; n++){
-  switch(votos){
-    case 1:
-    printf("Você votou no candidato 1 \n");
-    break;
-   
-    case 2:
-    printf("Você votou no candidato 2 \n");
-    break;
-   
-    case 3:
-    printf("Você votou no candidato 3 \n");
-    break;
-   
-    case 4:
-    printf("Você votou no candidato 4 \n");
-    break;
-
-    default:
-    printf("Valor invalido");
+  int voto,cont=0;
+  printf("Escreva algum numero diferente de zero pra iniciar o programa:");
+  scanf("%d",&voto);
   
- }
- 
- }
-printf("%d \n",n);
+  
+  while(voto !=0){
+    printf("digite o voto:");
+    scanf("%d",&voto);
+    switch(voto){
+      case 1:
+        cont++;
+        printf("Votou 1 \n");
+        cont += voto;
+      break;
+      case 2:
+        cont++;
+        printf("Votou 2 \n");
+      break;
+      case 3:
+        cont++;
+        printf("Votou 3 \n");
+      break;
+      case 4:
+        cont++;
+        printf("Votou 4 \n");
+      break;
+      case 5:
+        cont++;
+        printf("Votou Nulo \n");
+      break;
+      case 6:
+        cont++;
+        printf("Votou Branco \n");
+      break;
+    default:
+      printf("Programa encerrado! \n ");
+    break;
+    }
+    
+  }
+  printf("%d",cont);
   return 0;
 }
-
 
 #include <stdio.h>
 
