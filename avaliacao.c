@@ -48,18 +48,22 @@ int main(void) {
 #include <stdio.h>
 
 int main(void) {
-  int i,base,exp;
+  float i,base,exp;
   
   printf("Digite a base:");
-  scanf("%d",&base);
+  scanf("%f",&base);
   int nresult = base;
   printf("Digite o expoente:");
-  scanf("%d",&exp);
+  scanf("%f",&exp);
+  float div = (1/base)*-exp;
 
   for(i = 1; i<exp; i++){
     nresult = nresult * base;
 
   }
-  printf("%d",nresult);
+  if(exp < 0){
+     printf("Se o exp for negativo o numero será :%f",div);
+  }
+  else printf("%d",nresult);
   return 0;
 }
