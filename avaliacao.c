@@ -47,21 +47,26 @@ int main(void) {
 
 int main(void) {
   float i,base,exp;
-  
+  int cont = 0;
+ 
   printf("Digite a base:");
   scanf("%f",&base);
-  int nresult = base;
+ 
+  float nresult = base;
+ 
   printf("Digite o expoente:");
   scanf("%f",&exp);
-  float div = (1/base)*-exp;
 
-  for(i = 1; i<exp; i++){
+  if(exp<0){
+    exp = -1 * exp;
+    cont = 1;
+  } 
+for(i = 1; i<exp; i++){
     nresult = nresult * base;
+}
+if(cont == 1){
+  printf("%f",1/nresult);
+}else printf("%f",nresult);
 
-  }
-  if(exp < 0){
-     printf("Se o exp for negativo o numero será :%f",div);
-  }
-  else printf("%d",nresult);
   return 0;
 }
