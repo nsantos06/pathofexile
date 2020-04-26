@@ -1,50 +1,48 @@
 #include <stdio.h>
 
 int main(void) {
-  int voto,cont=0;
-  printf("Escreva algum numero diferente de zero pra iniciar o programa:");
-  scanf("%d",&voto);
-  
-  
-  while(voto !=0){
-    printf("digite o voto:");
-    scanf("%d",&voto);
+  int candidato1 = 0, candidato2 = 0, candidato3 = 0, candidato4 = 0, nulos = 0, brancos = 0, voto;
+
+  printf("Entre com uma sequência de votos terminada pelo número 0\n");
+  voto = 1;
+
+  while(voto != 0){
+    scanf("%d", &voto);
     switch(voto){
-      case 1:
-        cont++;
-        printf("Votou 1 \n");
-        cont += voto;
-      break;
-      case 2:
-        cont++;
-        printf("Votou 2 \n");
-      break;
-      case 3:
-        cont++;
-        printf("Votou 3 \n");
-      break;
-      case 4:
-        cont++;
-        printf("Votou 4 \n");
-      break;
-      case 5:
-        cont++;
-        printf("Votou Nulo \n");
-      break;
-      case 6:
-        cont++;
-        printf("Votou Branco \n");
-      break;
-    default:
-      printf("Programa encerrado! \n ");
-    break;
+        case 1:
+          candidato1++;
+        break;
+        case 2:
+          candidato2++;
+        break;
+        case 3:
+          candidato3++;
+        break;
+        case 4:
+          candidato4++;
+        break;
+        case 5:
+          nulos++;
+        break;
+        case 6:
+          brancos++;
+        break;
+      default:
+      printf("Programa encerrado! \n");
+      break;  
+      
     }
-    
   }
-  printf("%d",cont);
+  float total = candidato1 + candidato2 + candidato3 + candidato4 + nulos + brancos;
+  printf("Candidato 1:%d \n",candidato1);
+  printf("Candidato 2:%d \n",candidato2);
+  printf("Candidato 3:%d \n",candidato3);
+  printf("Candidato 4:%d \n",candidato4);
+  printf("Nulos:%d \n",nulos);
+  printf("Brancos:%d \n",brancos);
+  printf("Total de: %.2f Porcento \n",(brancos/total)*100);
   return 0;
 }
-
 #include <stdio.h>
 
 int main(void) {
