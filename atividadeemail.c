@@ -36,7 +36,7 @@ return 0;
 
 exercicio 3
   
-  #include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <locale.h>
 
@@ -49,28 +49,27 @@ scanf("%d",&n);
 
 printf("Quantidade de numeros no vetor B:");
 scanf("%d",&m);
-
+int mn = n + m;
 int a[n];
 int b[m];
-int c[100];
+int c[mn];
 for(k = 0; k<n; k++){
   printf("Digite os numeros no vetor A:");
   scanf("%d",&a[k]);
   if(a[k] %2 == 0){
-    
+    c[k] = a[k];
   }
-  
+ 
 }
 for(i = 0; i<m; i++){
   printf("Digite os numeros no vetor B:");
   scanf("%d",&b[i]);
   if(b[m] % 2 == 1){
-    
+    c[k] = b[m];
   }
 }
 
 return 0;
 }
-
 
 
