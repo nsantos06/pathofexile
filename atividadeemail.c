@@ -49,27 +49,43 @@ scanf("%d",&n);
 
 printf("Quantidade de numeros no vetor B:");
 scanf("%d",&m);
-int mn = n + m;
+int cont = 0;
 int a[n];
 int b[m];
-int c[mn];
-for(k = 0; k<n; k++){
+
+for(i = 0; i<n; ++i){
   printf("Digite os numeros no vetor A:");
-  scanf("%d",&a[k]);
-  if(a[k] %2 == 0){
-    c[k] = a[k];
+  scanf("%d",&a[i]);
+  if(a[i] % 2 == 0){
+    ++cont;
   }
  
 }
-for(i = 0; i<m; i++){
+for(i = 0; i<m; ++i){
   printf("Digite os numeros no vetor B:");
   scanf("%d",&b[i]);
-  if(b[m] % 2 == 1){
-    c[k] = b[m];
+  if(b[i] % 2 != 0){
+    ++cont;
+  }
+}
+int c[cont];
+int indexc = 0;
+
+for(i = 0; i<n; ++i){
+  if(a[i] % 2 == 0){
+    c[indexc++] = a[i];
+  }
+}
+
+for(i = 0; i<m; ++i){
+  if(b[i] % 2 != 0){
+    c[indexc++] = b[i];
   }
 }
 
 return 0;
 }
+
+
 
 
