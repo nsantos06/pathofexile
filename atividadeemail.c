@@ -34,4 +34,43 @@ cont = 0;
 return 0;
 }
 
+exercicio 3
+  
+  #include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+int n,m;
+int k,i;
+printf("Quantidade de numeros no vetor A:");
+scanf("%d",&n);
+
+printf("Quantidade de numeros no vetor B:");
+scanf("%d",&m);
+
+int a[n];
+int b[m];
+int c[100];
+for(k = 0; k<n; k++){
+  printf("Digite os numeros no vetor A:");
+  scanf("%d",&a[k]);
+  if(a[k] %2 == 0){
+    
+  }
+  
+}
+for(i = 0; i<m; i++){
+  printf("Digite os numeros no vetor B:");
+  scanf("%d",&b[i]);
+  if(b[m] % 2 == 1){
+    
+  }
+}
+
+return 0;
+}
+
+
 
