@@ -83,9 +83,20 @@ for(i = 0; i<m; ++i){
   }
 }
 
-return 0;
+printf("\n Elementos do vetor A ");
+for(i = 0; i<n; ++i){
+  printf("%d",a[i]);
 }
 
+printf("\n Elementos do vetor B ");
+for(i = 0; i<m; ++i){
+  printf("%d",b[i]);
+}
 
-
+printf("\n Elementos do vetor C ");
+for(i = 0; i<cont; ++i){
+  printf("%d",c[i]);
+}
+return 0;
+}
 
