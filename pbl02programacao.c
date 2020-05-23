@@ -1,24 +1,40 @@
 #include <stdio.h>
 
 int main(void) {
-int cidades,k,i;
+int cidades,linha,coluna;
 
 printf("Digite a qtd de cidades:");
 scanf("%d",&cidades);
 
 char nomecidade[cidades];
-for(k = 0; k<cidades; k++){
-  printf("Digite o nome das cidade[%d]:",k);
-  scanf("%s",&nomecidade[k]);
+for(linha = 0; linha<cidades; linha++){
+  printf("Digite o nome das cidade[%d]:",linha);
+  scanf("%s",&nomecidade[linha]);
 }
-int distancia [] = {};
-for(k = 0; k<cidades; k++){
-  for(i = 0; i<cidades; i++){
-    printf("Digite a distancia da cidade:[%d][%d]:",k,i);
-    scanf("%d",&distancia[k]);
+int distancia [cidades][cidades];
+for(linha = 0; linha<cidades; linha++){
+  for(coluna = 0; coluna<cidades; coluna++){
+    if(linha != coluna && coluna > linha){
+      printf("Digite a distancia da cidade:[%d][%d]:",linha,coluna);
+      scanf("%d",&distancia[linha][coluna]);
+}
+    else if(linha < coluna){
+      distancia[linha][coluna] = distancia[coluna][linha];
+    }
+    else if(linha == coluna){
+      distancia[linha][coluna] = 0;
+    }
   }
 }
 
+for(linha = 0; linha<cidades; linha++){
+  printf("\n%c |",nomecidade[linha]);
+  printf("%d",distancia[linha][coluna]);
+  for(coluna = 0; coluna<cidades; coluna++){
+    
+    
+  }
+}
 
 
   return 0;
