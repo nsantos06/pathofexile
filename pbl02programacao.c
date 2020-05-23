@@ -18,7 +18,7 @@ for(linha = 0; linha<cidades; linha++){
       printf("Digite a distancia da cidade:[%d][%d]:",linha,coluna);
       scanf("%d",&distancia[linha][coluna]);
 }
-    else if(linha < coluna){
+    else if(linha > coluna){
       distancia[linha][coluna] = distancia[coluna][linha];
     }
     else if(linha == coluna){
@@ -26,15 +26,15 @@ for(linha = 0; linha<cidades; linha++){
     }
   }
 }
-  printf("   |");
+  printf("  ");
   for(cont = 0; cont<cidades; cont++){
-    printf("%c |",nomecidade[cont]);
+    printf("%c ",nomecidade[cont]);
   }
 
 for(linha = 0; linha<cidades;linha++){
-  printf("\n %c |",nomecidade[linha]);
+  printf("\n %c ",nomecidade[linha]);
   for(coluna = 0; coluna<cidades;coluna++){
-    printf("%d |", distancia[linha][coluna]);
+    printf("%d ", distancia[linha][coluna]);
   }
 }
 
