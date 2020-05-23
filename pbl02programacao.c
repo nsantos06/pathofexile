@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-int cidades,linha,coluna;
+int cidades,linha,coluna,cont;
 
 printf("Digite a qtd de cidades:");
 scanf("%d",&cidades);
@@ -27,14 +27,6 @@ for(linha = 0; linha<cidades; linha++){
   }
 }
 
-for(linha = 0; linha<cidades; linha++){
-  printf("\n%c |",nomecidade[linha]);
-  printf("%d",distancia[linha][coluna]);
-  for(coluna = 0; coluna<cidades; coluna++){
-    
-    
-  }
-}
 
 
   return 0;
