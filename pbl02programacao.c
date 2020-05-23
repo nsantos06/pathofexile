@@ -26,7 +26,17 @@ for(linha = 0; linha<cidades; linha++){
     }
   }
 }
+  printf("   |");
+  for(cont = 0; cont<cidades; cont++){
+    printf("%c |",nomecidade[cont]);
+  }
 
+for(linha = 0; linha<cidades;linha++){
+  printf("\n %c |",nomecidade[linha]);
+  for(coluna = 0; coluna<cidades;coluna++){
+    printf("%d |", distancia[linha][coluna]);
+  }
+}
 
 
   return 0;
