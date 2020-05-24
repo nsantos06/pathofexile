@@ -37,6 +37,27 @@ for(linha = 0; linha<cidades;linha++){
     printf("%d ", distancia[linha][coluna]);
   }
 }
+printf("\n----LetraB-----\n");
+char cidade1[2],cidade2[2],contb;
+int validacao1,validacao2;
+
+printf("Nome da primeira cidade:");
+scanf("%s",cidade1);
+printf("Nome da segunda cidade:");
+scanf("%s",cidade2);
+
+validacao1 = 0; validacao2 = 0;
+
+for(linha = 0; linha<cidades; linha++){
+  if(cidade1[0] == nomecidade[linha]){
+    validacao1 = linha;
+  }
+  if(cidade2[0] == nomecidade[linha]){
+    validacao2 = linha;
+  }
+}
+int diferenca[validacao1][validacao2];
+printf("%d",diferenca[validacao1][validacao2]);
 
 
   return 0;
