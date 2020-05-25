@@ -78,8 +78,35 @@ for(linha = 0; linha<cidades;linha++){
     printf("%d ", distancia[linha][coluna]);
   }
 }
-  
+printf("\n----LetraE-----\n");
+
+for(linha = 0; linha<cidades;linha++){
+  for(coluna = 0; coluna<cidades;coluna++){
+    if(distancia[linha][coluna] !=0 ){
+      distancia[coluna][linha] = distancia[linha][coluna];;
+    }
+    if(linha == coluna ){
+      distancia[linha][coluna] = 0;
+    }
+    else{
+      printf(" \nDistancia entre a primeira cidade %c e a segunda %c",nomecidade[linha],nomecidade[coluna]);
+      scanf("%d",&distancia[linha][coluna]);
+    }
+  }
+}
+printf("  ");
+  for(cont = 0; cont<cidades; cont++){
+    printf("%c ",nomecidade[cont]);
+  }
+
+for(linha = 0; linha<cidades;linha++){
+  printf("\n %c ",nomecidade[linha]);
+  for(coluna = 0; coluna<cidades;coluna++){
+    printf("%d ", distancia[linha][coluna]);
+  }
+}
   
   
   return 0;
+
 }
