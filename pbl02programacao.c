@@ -41,12 +41,15 @@ printf("\n----LetraB-----\n");
 char cidade1[2],cidade2[2],contb;
 int validacao1,validacao2;
 
-printf("Nome da primeira cidade:");
+validacao1 = 0; validacao2 = 1;
+
+while(validacao1 != validacao2){
+
+printf("\nNome da primeira cidade:");
 scanf("%s",cidade1);
-printf("Nome da segunda cidade:");
+printf("\nNome da segunda cidade:");
 scanf("%s",cidade2);
 
-validacao1 = 0; validacao2 = 0;
 
 for(linha = 0; linha<cidades; linha++){
   if(cidade1[0] == nomecidade[linha]){
@@ -56,9 +59,9 @@ for(linha = 0; linha<cidades; linha++){
     validacao2 = linha;
   }
 }
-int diferenca[validacao1][validacao2];
-printf("%d",diferenca[validacao1][validacao2]);
 
-
+printf("A diferenca é :%d",distancia[validacao1][validacao2]);
+}
+printf("\n----LetraC-----\n");
   return 0;
 }
