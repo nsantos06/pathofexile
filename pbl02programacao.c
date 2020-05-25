@@ -63,5 +63,23 @@ for(linha = 0; linha<cidades; linha++){
 printf("A diferenca é :%d",distancia[validacao1][validacao2]);
 }
 printf("\n----LetraC-----\n");
+
+   printf("  ");
+  for(cont = 0; cont<cidades; cont++){
+    printf("%c ",nomecidade[cont]);
+  }
+
+for(linha = 0; linha<cidades;linha++){
+  printf("\n %c ",nomecidade[linha]);
+  for(coluna = 0; coluna<cidades;coluna++){
+    if(linha > coluna){
+      distancia[linha][coluna] = 0;
+    }
+    printf("%d ", distancia[linha][coluna]);
+  }
+}
+  
+  
+  
   return 0;
 }
