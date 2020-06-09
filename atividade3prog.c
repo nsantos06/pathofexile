@@ -1,3 +1,48 @@
+// atividade1
+#include <stdio.h>
+
+int main(void) {
+  int k,i;
+  int soma = 0;
+  
+  printf("digite a qtd de elementos no vetor:");
+  scanf("%d",&k);
+
+  int vetor[k];
+
+  for(i = 0; i<k; i++){
+    printf("Digite os numeros no vetor:");
+    scanf("%d",&vetor[i]);
+  }
+  
+  for(i = 0; i<k; i++){
+    soma = soma + vetor[i];
+    printf("[%d] ", soma);
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 
 int main(void) {
