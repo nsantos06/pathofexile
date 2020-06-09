@@ -79,25 +79,27 @@ int main(void) {
 #include <stdio.h>
 
 int main(void) {
-  int linha,coluna,numero,i;
+  int linha,coluna,n,m,i;
+  int nulo = 0;
+  
+  printf("Digite a quantidade de linha:");
+  scanf("%d",&n);
+
+  printf("Digite a quantidade de coluna:");
+  scanf("%d",&m);
+
+  int matriz[n][m];
+
+  for(linha = 0; linha<n; linha++){
+    for(coluna = 0; coluna < m; coluna++){
+      printf("Digite os elementos da posicao [%d] [%d]: ",linha,coluna);
+      scanf("%d",&matriz[linha][coluna]); 
+    }
+  }
+  
   
 
-  printf("Digite quantos numeros:");
-  scanf("%d",&numero);
 
-  int matriz[numero][numero];
-  for(linha = 0; linha<numero; ++linha){
-    for(coluna = 0; coluna<numero; ++coluna){
-      printf("Digite os numeros na posicao [%d] [%d]:",linha,coluna);
-      scanf("%d",&matriz[linha][coluna]);
-    }
-  }
-    
-  for(linha = 0; linha<numero; linha++){
-    for(coluna = 0; coluna< numero; coluna++){
-      printf("\n %d",matriz[linha][coluna]);
-    }
-  }
 
   return 0;
 }
