@@ -5,7 +5,7 @@ int main(void) {
   int k,i;
   int soma = 0;
   
-  printf("digite a qtd de elementos no vetor:");
+  printf("Digite a quantidade de elementos no vetor:");
   scanf("%d",&k);
 
   int vetor[k];
@@ -17,7 +17,7 @@ int main(void) {
   
   for(i = 0; i<k; i++){
     soma = soma + vetor[i];
-    printf("[%d] ", soma);
+    printf("\nO vetor T vai ter o numero: [%d] no indice: [%d]", soma,i);
   }
 
   return 0;
