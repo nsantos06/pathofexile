@@ -75,7 +75,6 @@ int main(void) {
 
 
 //atividade 6
-
 #include <stdio.h>
 
 int main(void) {
@@ -97,6 +96,14 @@ int main(void) {
     }
   }
   
+  for(linha = 0; linha<n; linha++){
+    for(coluna = 0; coluna<m; coluna++){
+       if(matriz[linha][coluna] == 0){
+         nulo++;
+       }
+    }
+  }
+  printf("A quantidade de numeros nulos é:[%d] ",nulo);
   
 
 
