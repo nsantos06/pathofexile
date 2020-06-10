@@ -27,31 +27,49 @@ int main(void) {
 #include <stdio.h>
 
 int main(void) {
-  char cidades[100][100];
-  float dados[4][0];
-  int i,k,j;
-  
-  printf("Digite a quantidade de cidades:");
-  scanf("%d",&k);
+  int n,temp;
 
-  for(i = 0; i < k; i++){
-    printf("Digite o nome das cidade: \n");
-    scanf("%s",cidades[i]);
+  printf("Digite o numero de cidades:");
+  scanf("%d",&n);
+
+  char nomecidade[n][150];
+  int temperatura[n]; int vento[n]; int umidade[n];
+  int linha,coluna;
+
+  for(linha = 0; linha<n; linha++){
+    printf("Digite o nome da cidade [%d]:",linha);
+    scanf("%s",nomecidade[linha]);
+
+    printf("Digite a temperatura na cidade [%d]:",linha);
+    scanf("%d",&temperatura[n]);
+    
+    printf("Digite a umidade na cidade [%d]:",linha);
+    scanf("%d",&umidade[linha]);
+
+    printf("Digite o vento na cidade [%d]:",linha);
+    scanf("%d",&vento[linha]);
   }
+  printf("Cidade | Pode ou nao jogar pesticida");
+  int validacao = 0;
   
-  for(i = 0; i<k; i++){
-    printf("Digite quantos graus na cidade de %s: \n",cidades[i]);
-    scanf("%f",dados[i]);
-}
-  for(i = 0; i<k; i++){
-    printf("Digite a umidade na cidade de %s: \n",cidades[i]);
-    scanf("%f",dados[i]);
-}
+  for(linha = 0; linha<n; linha++){
+    if(temperatura[linha]>30){
+      validacao = 1;
+    }
+    else if(umidade[linha]>45 || umidade[linha] <75){
+      validacao = 1;
+    }
+    else if(vento[linha] > 20){
+      validacao = 1;
+    }
 
-  for(i = 0; i<k; i++){
-    printf("Digite o vento em km/h na cidade de %s: \n",cidades[i]);
-    scanf("%f",dados[i]);
-}
+    if(validacao == 0){
+      printf("\n%s | Sim ",nomecidade[linha]);
+    }
+    else{
+      printf("\n%s | Nao ",nomecidade[linha]);
+    }
+  }
 
 
   return 0;
