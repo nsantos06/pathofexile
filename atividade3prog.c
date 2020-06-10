@@ -59,20 +59,35 @@ int main(void) {
 
 
 
+//atividade 5
+#include <stdio.h>
 
+int main(void) {
+  int n,k,indice;
+  int apagar;
 
+  printf("Digite o tamanho do vetor:");
+  scanf("%d",&n);
 
+  printf("Digite o indice que queira retirar: ");
+  scanf("%d",&indice);
 
+  int vetor[n];
+  for(k = 0; k<n; k++){
+    printf("Digite os numeros do vetor:");
+    scanf("%d",&vetor[k]);
+  }
 
-
-
-
-
-
-
-
-
-
+  for(k=indice ; k<n; k++){
+    vetor[k] = vetor[k+1];
+  }
+  for(k = 0; k<n-1; k++){
+    printf("[%d] ",vetor[k]);
+  }
+  
+  
+  return 0;
+}
 
 //atividade 6
 #include <stdio.h>
