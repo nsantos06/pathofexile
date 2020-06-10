@@ -27,7 +27,7 @@ int main(void) {
 #include <stdio.h>
 
 int main(void) {
-  int n,temp;
+  int n;
 
   printf("Digite o numero de cidades:");
   scanf("%d",&n);
@@ -38,10 +38,10 @@ int main(void) {
 
   for(linha = 0; linha<n; linha++){
     printf("Digite o nome da cidade [%d]:",linha);
-    scanf("%s",nomecidade[linha]);
+    scanf("\n%[^\n]",nomecidade[linha]);
 
     printf("Digite a temperatura na cidade [%d]:",linha);
-    scanf("%d",&temperatura[n]);
+    scanf("%d",&temperatura[linha]);
     
     printf("Digite a umidade na cidade [%d]:",linha);
     scanf("%d",&umidade[linha]);
@@ -49,14 +49,15 @@ int main(void) {
     printf("Digite o vento na cidade [%d]:",linha);
     scanf("%d",&vento[linha]);
   }
-  printf("Cidade | Pode ou nao jogar pesticida");
-  int validacao = 0;
+  printf("\nCidade | Pode ou nao jogar pesticida");
+  
   
   for(linha = 0; linha<n; linha++){
-    if(temperatura[linha]>30){
+    int validacao = 0;
+    if(temperatura[linha] > 30){
       validacao = 1;
     }
-    else if(umidade[linha]>45 || umidade[linha] <75){
+    else if(umidade[linha] < 45 || umidade[linha] > 75){
       validacao = 1;
     }
     else if(vento[linha] > 20){
