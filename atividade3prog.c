@@ -98,6 +98,7 @@ int main(void) {
 int main(void) {
   int linha,coluna,n,m,i;
   int nulo = 0;
+  int nulo2 = 0; int linhanulo = 0;
   
   printf("Digite a quantidade de linha:");
   scanf("%d",&n);
@@ -119,8 +120,15 @@ int main(void) {
        if(matriz[linha][coluna] == 0){
          nulo++;
        }
+       if(nulo > nulo2){
+         nulo2 = nulo;
+         linhanulo = linha;
+       }
     }
   }
+  
+  
+  printf("A Linha com maior quantidade de nulos é a [%d]\n",linhanulo);
   printf("A quantidade de numeros nulos é:[%d] ",nulo);
   
 
