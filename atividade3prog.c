@@ -73,7 +73,8 @@ int main(void) {
   scanf("%d",&indice);
 
   int vetor[n];
-  for(k = 0; k<n; k++){
+  if(indice >=0 && indice < n-1){
+    for(k = 0; k<n; k++){
     printf("Digite os numeros do vetor:");
     scanf("%d",&vetor[k]);
   }
@@ -84,7 +85,9 @@ int main(void) {
   for(k = 0; k<n-1; k++){
     printf("[%d] ",vetor[k]);
   }
-  
+    
+  }
+  else printf("Digite um indice valido!");
   
   return 0;
 }
