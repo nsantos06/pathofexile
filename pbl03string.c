@@ -20,7 +20,7 @@ int main(void) {
     if(s1[k] == s2[i])
     {
       printf("[%c] = [%c]\n",s1[k],s2[i]);
-      if(i == 1)
+      if(i <= k1)
       {
         contador++;
       }
@@ -31,6 +31,6 @@ int main(void) {
       i = 0;
     }
   }
-  
+  printf("A quantidade é:[%d]",contador);
   return 0;
 }
