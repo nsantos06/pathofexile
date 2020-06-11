@@ -82,6 +82,9 @@ int main(void) {
 //atividade 4 
 #include <stdio.h>
 
+//atividade 4 
+
+
 int soma(int valor, int vetorA[], int vetorB[], int numero)
 {
   if(valor !=0)
@@ -91,7 +94,7 @@ int soma(int valor, int vetorA[], int vetorB[], int numero)
     {
       vetorA[k] += numero;
       vetorB[k] += numero;
-      printf("\n [%d] [%d]",vetorA[k],vetorB[k]);
+      printf("\n [%d]               [%d]",vetorA[k],vetorB[k]);
     }
   }
   
@@ -120,7 +123,7 @@ int main(void) {
       scanf("%d",&vetorB[c]);
     }
   
-  soma = (valor,vetorA[],vetorB[],numero);
+  soma(numeroelemento, vetorA, vetorB, numerosoma);
   
   return 0;
 }
