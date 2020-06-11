@@ -17,20 +17,21 @@ int main(void) {
   
   for(k = 0; k<k1; k++)
   {
-    if(s1[k] == s2[i])
-    {
+    if(s1[k] == s2[i]){
       printf("[%c] = [%c]\n",s1[k],s2[i]);
-      if(i <= k1)
-      {
+     
+      if(i == k2){
         contador++;
+        printf("contador :[%d]\n",contador);
+      }
+      
+      else{
+        i = 0;
       }
       i++;
     }
-    else
-    {
-      i = 0;
-    }
+  
   }
-  printf("A quantidade é:[%d]",contador);
+ 
   return 0;
 }
