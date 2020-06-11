@@ -78,6 +78,8 @@ int main(void) {
 
 #include <stdio.h>
 
+#include <stdio.h>
+
 //atividade 4 
 
 
@@ -100,20 +102,23 @@ int soma(int valor, int vetorA[], int vetorB[], int numero)
 
 int main(void) {
   int c = 0;
-  int numeroelemento,valor,numero;
+  int numeroelemento,valor,numero,numerosoma;
 
   printf("Digite o tamanho dos vetores A e B:");
   scanf("%d",&numeroelemento);
 
   int vetorA[numeroelemento];
   int vetorB[numeroelemento];
+
+  printf("Digite o numero a somar:");
+  scanf("%d",&numerosoma);
     
   for(c = 0; c<numeroelemento; ++c)
     {
-      printf("Digite o elemento do [vetorA]:[%d]",c);
+      printf("Digite os elementos do vetorA [%d]:",c);
       scanf("%d",&vetorA[c]);
       
-      printf("Digite o elemento do [vetorA]:[%d]",c);
+      printf("Digite os elementos do vetorB [%d]:",c);
       scanf("%d",&vetorB[c]);
       
     }
