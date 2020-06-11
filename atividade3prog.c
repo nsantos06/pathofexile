@@ -76,12 +76,11 @@ int main(void) {
   return 0;
 }
 
-#include <stdio.h>
 
-#include <stdio.h>
+
 
 //atividade 4 
-
+#include <stdio.h>
 
 int soma(int valor, int vetorA[], int vetorB[], int numero)
 {
@@ -90,7 +89,6 @@ int soma(int valor, int vetorA[], int vetorB[], int numero)
     printf("[Primeiro Vetor] | [Segundo vetor]");
     for(int k = 0; k<valor; ++k)
     {
-      
       vetorA[k] += numero;
       vetorB[k] += numero;
       printf("\n [%d] [%d]",vetorA[k],vetorB[k]);
@@ -120,28 +118,12 @@ int main(void) {
       
       printf("Digite os elementos do vetorB [%d]:",c);
       scanf("%d",&vetorB[c]);
-      
     }
-
+  
+  soma = (valor,vetorA[],vetorB[],numero);
   
   return 0;
 }
-
-int main(void) {
-  int numeroelemento,i;
-  int numero=0,valor=0;
-  printf("Digite a quantidade de elementos que tu quer colocar no [vetorA] e [vetorB]:");
-  scanf("%d",&numeroelemento);
-
-  int vetorA[numeroelemento];
-  int vetorB[numeroelemento];
-
-  printf("Digite o numero que quer somar:");
-  scanf("%d",&i);
-
-  return 0;
-}
-
 //atividade 5
 #include <stdio.h>
 
