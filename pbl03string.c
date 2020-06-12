@@ -17,14 +17,11 @@ int main(void) {
   
   for(k = 0; k<k1; k++)
   {
+    
     if(s1[k] == s2[i]){
-      printf("[%c] = [%c]\n",s1[k],s2[i]);
-      printf("%d == %d\n",i,k2);
       
-
-      if(i == k2){
+      if(i == (k2-1)){
         contador++;
-        printf("[%d] - (%c == %c)\n",k,s1[k],s2[k]);
       }
       i++;
     }
