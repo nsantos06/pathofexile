@@ -19,19 +19,19 @@ int main(void) {
   {
     if(s1[k] == s2[i]){
       printf("[%c] = [%c]\n",s1[k],s2[i]);
-     
+      printf("%d == %d\n",i,k2);
+      
+
       if(i == k2){
         contador++;
-        printf("contador :[%d]\n",contador);
-      }
-      
-      else{
-        i = 0;
+        printf("[%d] - (%c == %c)\n",k,s1[k],s2[k]);
       }
       i++;
     }
-  
+   else{
+        i = 0;
+      }
   }
- 
+  printf("contador :[%d]\n",contador);
   return 0;
 }
