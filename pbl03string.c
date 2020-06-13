@@ -3,7 +3,6 @@
 #include <ctype.h>
 int main(void) {
   int k, contador = 0, i = 0;
-  char maior,menor;
   char s1[100];
   char s2[100];
 
