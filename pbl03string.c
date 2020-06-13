@@ -1,3 +1,5 @@
+//ATIVIDADE 3
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -40,7 +42,7 @@ int main(void) {
 
 
 
-//atividade 4 
+//ATIVIDADE 4
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -54,11 +56,10 @@ int funcaostring(char *s1, char *s2){
   {
    
     if(toupper(s1[k]) == toupper(s2[i])){
-      printf("%c = %c \n",s1[k],s2[i]);
+      
       if(i == (k2-1)){
         contador = (k - (k2-1));
-        printf("%d == %d[%d]\n",i,(k2-1),k2);
-        printf("contador: [%d]\n",contador);
+        
         return contador;
         
         break;
@@ -99,5 +100,6 @@ int main(void) {
   }
   return 0;
 }
+
 
 
