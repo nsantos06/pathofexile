@@ -55,10 +55,13 @@ int funcaostring(char *s1, char *s2){
   {
    
     if(toupper(s1[k]) == toupper(s2[i])){
-      
+      printf("%c = %c \n",s1[k],s2[i]);
       if(i == (k2-1)){
-        contador = (i - k2);
+        contador = (k - (k2-1));
+        printf("%d == %d[%d]\n",i,(k2-1),k2);
+        printf("contador: [%d]\n",contador);
         return contador;
+        
         break;
       }
       i++;
