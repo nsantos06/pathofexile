@@ -14,14 +14,14 @@ int main(void) {
     if(vetor[i+1]> vetor[i]){
       aux = vetor[i];
       vetor[i] = vetor[i+1];
-      vetor[i+1] = vetor[i];
+      vetor[i+1] = aux;
       
     }
-    printf("[%d]",vetor[i]);
-    
   }
 
-
+for(i =0; i<(tam-1); i++){
+  printf("[%d]",vetor[i]);
+}
   return 0;
 }
 
