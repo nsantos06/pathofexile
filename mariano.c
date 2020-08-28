@@ -1,5 +1,4 @@
 #include <stdio.h>
-exercicio1 meio errado
 int main(void) {
   int i,tam,aux;
   printf("Digite o tamanho do vetor:");
@@ -11,7 +10,7 @@ int main(void) {
     scanf("%d",&vetor[i]);
   }
 
-  for(i = 0; i<tam; i++){
+  for(i = 0; i<(tam -1); i++){
     if(vetor[i+1]> vetor[i]){
       aux = vetor[i];
       vetor[i] = vetor[i+1];
