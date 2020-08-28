@@ -1,26 +1,27 @@
 #include <stdio.h>
-
+exercicio1 meio errado
 int main(void) {
-  int tamanho;
-  
+  int i,tam,aux;
   printf("Digite o tamanho do vetor:");
-  scanf("%d",&tamanho);
-  
-  int vetor[tamanho];
-  
-  int i,j;
+  scanf("%d",&tam);
 
-  for(i=0; i<tamanho; i++){
-    printf("Digite o elemento:[%d]:",i);
+  int vetor[tam];
+  for(i = 0; i< tam; i++){
+    printf("Digite os numeros:");
     scanf("%d",&vetor[i]);
   }
-  
-  for(i = 0; i< tamanho; i++){
-    for( j = i + 1; j<tamanho; j++){
-      if(vetor[i] == vetor[j]){
-        printf("O elemento na posicao %d aparece na posicao %d",i,j);
-      }
+
+  for(i = 0; i<tam; i++){
+    if(vetor[i+1]> vetor[i]){
+      aux = vetor[i];
+      vetor[i] = vetor[i+1];
+      vetor[i+1] = vetor[i];
+      
     }
+    printf("[%d]",vetor[i]);
+    
   }
+
+
   return 0;
 }
