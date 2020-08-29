@@ -36,28 +36,24 @@ exercicio2 - meio errado
 #include <stdio.h>
 
 int main(void) {
-  int i,tam,aux,aux2;
+  int i,tam;
   printf("Digite o tamanho do vetor:");
   scanf("%d",&tam);
 
-  int vetor[tam],arr[tam];
+  int vetor[tam],vetor2[tam];
   for(i = 0; i< tam; ++i){
-    printf("Digite os numeros:");
+    printf("Digite os numeros na posicao {%d}:",i);
     scanf("%d",&vetor[i]);
-    aux = vetor[i];
   }
 
   for(i = 0; i<tam; ++i){
-    printf("Digite os numeros no segundo vetor:");
-    scanf("%d",&arr[i]);
-    aux2 = arr[i];
+    printf("Digite os numeros no segundo vetor na posicao {%d}:",i);
+    scanf("%d",&vetor2[i]);
   }
 
-  if(aux == aux2){
-      printf("Sao iguais!");
-    }else{
-      printf("Sao diferentes!");
-    }
-
+  for(i=0;i<tam; ++i){
+    printf("\nPosicao{%d}: Vetor1:[%d] Vetor2:[%d]\n",i,vetor[i],vetor2[i]);
+  }
   return 0;
 }
+
