@@ -16,7 +16,7 @@ int main(void) {
 
   for(i = 0; i<tam ; ++i){
     for(k = 0; k<tam; ++k){
-      if(vetor[k+1]> vetor[k]){
+      if(vetor[k-1]> vetor[k]){
       aux = vetor[k-1];
       vetor[k-1] = vetor[k];
       vetor[k] = aux;
