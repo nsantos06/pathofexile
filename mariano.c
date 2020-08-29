@@ -1,29 +1,36 @@
 #include <stdio.h>
+
 int main(void) {
-  int i,tam,aux;
+  
+  int i,aux,k; // dois contadores (i,k), variavel auxiliar
+  int tam; // tamanho do array
+  
   printf("Digite o tamanho do vetor:");
   scanf("%d",&tam);
 
   int vetor[tam];
-  for(i = 0; i< tam; i++){
-    printf("Digite os numeros:");
+  for(i = 0; i<tam; ++i){
+    printf("Digite os numeros na posicao {%d}:",i+1);
     scanf("%d",&vetor[i]);
   }
 
-  for(i = 0; i<(tam -1); i++){
-    if(vetor[i+1]> vetor[i]){
-      aux = vetor[i];
-      vetor[i] = vetor[i+1];
-      vetor[i+1] = aux;
-      
+  for(i = 0; i<tam ; ++i){
+    for(k = 0; k<tam; ++k){
+      if(vetor[k+1]> vetor[k]){
+      aux = vetor[k-1];
+      vetor[k-1] = vetor[k];
+      vetor[k] = aux;
     }
+    }
+    
   }
 
-for(i =0; i<(tam-1); i++){
+for(i =0; i<tam; ++i){
   printf("[%d]",vetor[i]);
 }
   return 0;
 }
+
 
 exercicio2 - meio errado
 #include <stdio.h>
