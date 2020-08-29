@@ -36,25 +36,49 @@ exercicio2 - meio errado
 #include <stdio.h>
 
 int main(void) {
-  int i,tam;
+  
+  int i,aux=0,k; // dois contadores (i,k), variavel auxiliar
+  int tam; // tamanho do array
+  
   printf("Digite o tamanho do vetor:");
   scanf("%d",&tam);
 
-  int vetor[tam],vetor2[tam];
-  for(i = 0; i< tam; ++i){
-    printf("Digite os numeros na posicao {%d}:",i);
-    scanf("%d",&vetor[i]);
-  }
-
+  int vetor1[tam],vetor2[tam];
   for(i = 0; i<tam; ++i){
-    printf("Digite os numeros no segundo vetor na posicao {%d}:",i);
-    scanf("%d",&vetor2[i]);
+    printf("Digite os numeros na posicao {%d}:",i+1);
+    scanf("%d",&vetor1[i]);
   }
 
-  for(i=0;i<tam; ++i){
-    printf("\nPosicao{%d}: Vetor1:[%d] Vetor2:[%d]\n",i,vetor[i],vetor2[i]);
+  for(k = 0; k<tam; ++k){
+    printf("Digite os numeros da posicao {%d}",k+1);
+    scanf("%d",&vetor2[k]);
   }
-  return 0;
+  
+  for(i = 1; i<tam ; ++i){
+    for(k = 1; k<tam; ++k){
+      if(vetor1[k-1]> vetor1[k]){
+      aux = vetor1[k-1];
+      vetor1[k-1] = vetor1[k];
+      vetor1[k] = aux;
+     }
+   }
+  }
+
+for(i = 1; i<tam ; ++i){
+    for(k = 1; k<tam; ++k){
+      if(vetor2[k-1] > vetor2[k]){
+      aux = vetor2[k-1];
+      vetor2[k-1] = vetor2[k];
+      vetor2[k] = aux;
+     }
+  }
+}
+
+for(i =0; i<tam; ++i){
+  printf("[%d]",vetor1[i]);
+}
+
+return 0;
 }
 
 
