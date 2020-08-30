@@ -1,3 +1,4 @@
+// EXERCICIO 1 COMPLETO
 #include <stdio.h>
 
 int main(void) {
@@ -31,7 +32,7 @@ for(i =0; i<tam; ++i){
   return 0;
 }
 
-
+// EXERCICIO 2 COMPLETO
 #include <stdio.h>
 
 int main(void) {
@@ -96,8 +97,8 @@ if(flag == 1){
 return 0;
 }
 
-exercicio 4
-  #include <stdio.h>
+//EXERCICIO 4 FALTA METADE  
+#include <stdio.h>
 
 int main(void) {
   int tam;
