@@ -101,21 +101,28 @@ return 0;
 #include <stdio.h>
 
 int main(void) {
-  int tam;
+  int tam,tam2; //tamanho dos vetores
   int k,i; // variaveis do primeiro vetor
   int aux;
-  printf("Digite o tamanho dos vetores:");
+  
+  //pedindo o tamanho dos dois vetores
+  printf("Digite o tamanho do primeiro vetor:");
   scanf("%d",&tam);
 
-  int vetorA[tam], vetorB[tam];
+  printf("Digite o tamanho do segundo vetor:");
+  scanf("%d",&tam2);
 
+  int vetorA[tam], vetorB[tam2];
+
+  //pedindo os numeros do primeiro vetor
   for(i = 0; i<tam; i++){
     printf("Digite os numeros na posicao (%d):",i);
     scanf("%d",&vetorA[i]);
   }
-
+  
+  // ordenando o primeiro vetor
   for(i = 0; i<tam; i++){
-    for(k = i; k<tam; k++){
+    for(k = i; k<tam2; k++){
       if(vetorA[i] > vetorA[k]){
         aux = vetorA[i];
         vetorA[i] = vetorA[k];
@@ -124,13 +131,15 @@ int main(void) {
     }
   }
   int aux2; 
-
-   for(i = 0; i<tam; i++){
+  
+  //pedindo numeros no segundo vetor
+   for(i = 0; i<tam2; i++){
     printf("Digite os numeros na posicao (%d) no segundo vetor:",i);
     scanf("%d",&vetorB[i]);
   }
+    //ordenando o segundo vetor
     for(i = 0; i<tam; i++){
-    for(k = i; k<tam; k++){
+    for(k = i; k<tam2; k++){
       if(vetorB[i] > vetorB[k]){
         aux2 = vetorB[i];
         vetorB[i] = vetorB[k];
@@ -138,11 +147,12 @@ int main(void) {
       }
     }
   }
-
+  //imprimindo o primeiro vetor
   for( i = 0; i<tam; i++){
     printf("VetorA :{%d}\n",vetorA[i]);
-}
-  for( i = 0; i<tam; i++){
+} 
+  // imprimindo o segundo vetor
+  for( i = 0; i<tam2; i++){
     printf("VetorB: (%d)\n",vetorB[i]);
   }
 
