@@ -102,152 +102,166 @@ return 0;
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define sizeMAX [100]; // quantidade máxima de elementos
-/* getString(vetor, type);
-Ex: getString(vetor, letter) -- vai checar se existe algo que não seja letra na string
-Ex: getString(vetor, number) -- vai checar se existe algo que não seja numeros na string
-*/
-int getString(char *vetor, char *type) {
+#define tamMAX [100]; 
+
+int pegarString(char *vetor, char *tipo) {
+
 int c;
 int v = 0;
+
 for (c = 0; c < strlen(vetor); ++c) {
-if (type == "letter") {
-if (!isalpha(vetor[c])) {
-if(!isspace(vetor[c])) {
-++v;
+  if (tipo == "letter") {
+    if (!isalpha(vetor[c])) {
+      if(!isspace(vetor[c])) {
+        ++v;
+      }
+    }
+  }
+
+if (tipo == "number") {
+  if (isalpha(vetor[c])) {
+      if(vetor[c] != ',') {
+        ++v;
+      }
+    }
+  }
 }
+if (v > 0){
+  return 0;
+}else{
+  return 1;
 }
+
 }
-if (type == "number") {
-if (isalpha(vetor[c])) {
-if(vetor[c] != ',') {
-++v;
-}
-}
-}
-}
-if (v > 0)
-return 0;
-else
-return 1;
-}
-// inputOrder(vetor, size);
-void inputOrder(int *vetor, int size) {
+
+void ordenar(int *vetor, int size) {
 int aux;
 int i, c;
 for (i = 1; i < size; ++i) {
  for (c = 1; c < size; ++c) {
- if (vetor[c-1] > vetor[c]) {
- aux = vetor[c-1];
- vetor[c-1] = vetor[c];
- vetor[c] = aux;
- }
- }
+    if (vetor[c-1] > vetor[c]) {
+      aux = vetor[c-1];
+      vetor[c-1] = vetor[c];
+      vetor[c] = aux;
+    }
+  }
+  }
 }
-}
-// input removeRepeatedElement(vetor, size);
-void removeRepeatedElement(int * vector, int sizeVector) {
-int i, c, k;
+
+
+void removerelementos(int * vector, int sizeVector) {
+  int i, c, k;
 for(i = 0; i < sizeVector; i++) {
- for(c = i + 1; c < sizeVector; c++) {
- if(vector[c] == vector[i]) {
- for (k = c; k < sizeVector-1; k++) {
- vector[k] = vector[k+1];
- }
- sizeVector--;
- }
- }
+  for(c = i + 1; c < sizeVector; c++) {
+    if(vector[c] == vector[i]) {
+      for (k = c; k < sizeVector-1; k++) {
+        vector[k] = vector[k+1];
+      }
+      sizeVector--;
+      }
+    }
+  }
 }
-}
+
 int main(void) {
 
-char sizeMINEnter[100]; // entrada de quantidade minima de elementos
-printf("Enter the number of elements to be added in vector A, with a maximum of 100 elements  \n Number of elements:");
-scanf("%s", sizeMINEnter);
+char tamMinEle[100]; // entrada de quantidade minima de elementos
+printf("Digite o tamanho do vetor A:");
+scanf("%s", tamMinEle);
 
-while (getString(sizeMINEnter, "number") != 1 || atoi(sizeMINEnter) < 0 ||
-atoi(sizeMINEnter) > 100) {
-  printf("Enter the number of elements to be added in vector A, with a maximum of 100 elements. \n Number of elements: ");
-  scanf("%s", sizeMINEnter);
+while (pegarString(tamMinEle, "number") != 1 || atoi(tamMinEle) < 0 ||
+atoi(tamMinEle) > 100) {
+  
+  printf("Digite o tamanho do vetor A:");
+  scanf("%s", tamMinEle);
+
 }
-int sizeMINA = atoi(sizeMINEnter); // converção de string para int do sizeMIN
+int tamMinA = atoi(tamMinEle); // converção de string para int do sizeMIN
 
-printf("Enter the number of elements to be added in vector B, with a maximum of 100 elements. \n" );
-scanf("%s", sizeMINEnter);
+printf("Digite o tamanho do vetor B:" );
+scanf("%s", tamMinEle);
 
-while (getString(sizeMINEnter, "number") != 1 || atoi(sizeMINEnter) < 0 ||
-atoi(sizeMINEnter) > 100) {
-  printf("Enter the number of elements to be added in vector B, with a maximum of 100 elements. \n Number of elements");
-  scanf("%s", sizeMINEnter);
+while (pegarString(tamMinEle, "number") != 1 || atoi(tamMinEle) < 0 ||
+atoi(tamMinEle) > 100) {
+  
+  printf("Digite o tamanho do vetor B:");
+  scanf("%s", tamMinEle);
+
 }
-int sizeMINB = atoi(sizeMINEnter); // converção de string para int do sizeMIN
+int tamMinB = atoi(tamMinEle); // converção de string para int do sizeMIN
 
-char elementEnter[100]; // variavel que vai guarda a entrada do elemento
-int vectorA[sizeMINA], vectorB[sizeMINB]; // vetores
+char entradaElemento[100]; // variavel que vai guarda a entrada do elemento
+int vectorA[tamMinA], vectorB[tamMinB]; // vetores
 int i, c, k, s = 0; // contadores
 
-  for (i = 0; i < sizeMINA; ++i) {
-    printf("Enter the element of the index [A-%d]: ", i);
-    scanf("%s", elementEnter);
- while (getString(elementEnter, "number") != 1) {
-    printf("Enter the element of the index [A-%d]: ", i);
-    scanf("%s", elementEnter);
+  for (i = 0; i < tamMinA; ++i) {
+    printf("Coloque os elementos no indice A{%d}:", i);
+    scanf("%s", entradaElemento);
+ 
+ while (pegarString(entradaElemento, "number") != 1) {
+    printf("Coloque os elementos no indice A{%d}:", i);
+    scanf("%s", entradaElemento);
   }
-  vectorA[i] = atoi(elementEnter);
+  vectorA[i] = atoi(entradaElemento);
 }
  
- for (i = 0; i < sizeMINB; ++i) {
-  printf("Enter the element of the index [B-%d]: ", i);
-  scanf("%s", elementEnter);
- while (getString(elementEnter, "number") != 1 ) {
-  printf("Enter the element of the index [B-%d]: ", i);
-  scanf("%s", elementEnter);
+ for (i = 0; i < tamMinB; ++i) {
+    printf("Coloque os elementos no indice B{%d}:", i);
+    scanf("%s", entradaElemento);
+ 
+ while (pegarString(entradaElemento, "number") != 1 ) {
+  
+    printf("Coloque os elementos no indice {B-%d}: ", i);
+    scanf("%s", entradaElemento);
   }
-  vectorB[i] = atoi(elementEnter);
+  
+  vectorB[i] = atoi(entradaElemento);
 }
 
 int aux; // variavel auxiliar para ordenar o vetor
 
-inputOrder(vectorA, sizeMINA);
-inputOrder(vectorB, sizeMINB);
+ordenar(vectorA, tamMinA);
+ordenar(vectorB, tamMinB);
 
-int sizeMINC = (sizeMINA+sizeMINB); // variavel que armazena o tamanho do vetor C,
+int tamMinC = (tamMinA+tamMinB); // variavel que armazena o tamanho do vetor C,
 //no caso o tamanho é A+B=C
-int vectorC[sizeMINC]; // vetor C
+int vectorC[tamMinC]; // vetor C
 
-for (i = 0; i < sizeMINA; ++i) {
+for (i = 0; i < tamMinA; ++i) {
  vectorC[i] = vectorA[i];
  ++s;
 }
-for (i = 0; i < sizeMINB; ++i) { // adicionar na posição correta
+for (i = 0; i < tamMinB; ++i) { // adicionar na posição correta
  vectorC[s] = vectorB[i];
  ++s;
 }
-for(i = 0; i < sizeMINC; i++) {
-  for(c = i + 1; c < sizeMINC; c++) {
+for(i = 0; i < tamMinC; i++) {
+  for(c = i + 1; c < tamMinC; c++) {
     if(vectorC[c] == vectorC[i]) {
-      for (k = c; k < sizeMINC-1; k++) {
+      for (k = c; k < tamMinC-1; k++) {
         vectorC[k] = vectorC[k+1];
  }
-  sizeMINC--;
+  tamMinC--;
  }
  }
 }
 
-removeRepeatedElement(vectorC, sizeMINC);
-inputOrder(vectorC, sizeMINC);
+removerelementos(vectorC, tamMinC);
+ordenar(vectorC, tamMinC);
 
  printf("\n A ");
- for (i = 0; i < sizeMINA; ++i) {
- printf("[%d] ", vectorA[i]);
+ for (i = 0; i < tamMinA; ++i) {
+    printf("[%d] ", vectorA[i]);
  }
  printf("\n B ");
- for (i = 0; i < sizeMINB; ++i) {
- printf("[%d] ", vectorB[i]);
+ 
+ for (i = 0; i < tamMinB; ++i) {
+    printf("[%d] ", vectorB[i]);
  }
  printf("\n C ");
- for (i = 0; i < sizeMINC; ++i) {
- printf("[%d] ", vectorC[i]);
+ 
+ for (i = 0; i < tamMinC; ++i) {
+    printf("[%d] ", vectorC[i]);
  }
  return 0;
 }
