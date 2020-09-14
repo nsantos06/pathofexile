@@ -235,33 +235,34 @@ for (i = 0; i < tamMinB; ++i) { // adicionar na posição correta
  vectorC[s] = vectorB[i];
  ++s;
 }
+
 for(i = 0; i < tamMinC; i++) {
   for(c = i + 1; c < tamMinC; c++) {
     if(vectorC[c] == vectorC[i]) {
       for (k = c; k < tamMinC-1; k++) {
         vectorC[k] = vectorC[k+1];
- }
-  tamMinC--;
- }
- }
+      }
+    tamMinC--;
+    }
+  }
 }
 
 removerelementos(vectorC, tamMinC);
 ordenar(vectorC, tamMinC);
 
- printf("\n A ");
+ printf("\n Vetor A:");
  for (i = 0; i < tamMinA; ++i) {
     printf("[%d] ", vectorA[i]);
  }
- printf("\n B ");
+ printf("\n Vetor B:");
  
  for (i = 0; i < tamMinB; ++i) {
-    printf("[%d] ", vectorB[i]);
+    printf("{%d} ", vectorB[i]);
  }
- printf("\n C ");
+ printf("\n Vetor C:");
  
  for (i = 0; i < tamMinC; ++i) {
-    printf("[%d] ", vectorC[i]);
+    printf("(%d) ", vectorC[i]);
  }
  return 0;
 }
