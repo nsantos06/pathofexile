@@ -1,11 +1,22 @@
-//atividade de projeto interdisciplinar 24-09-2020, dados nao homogeneos.
-
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
 #include <stdlib.h>
 
 #define disciplinamax 100;
+
+int soma(int c, int *vetor) {
+	int j; 
+	int k = 0;
+	
+	for (j = 0; j < c; ++j) {
+		k += vetor[j];
+	}
+
+	return k;
+}
+
+
 
 int main(void) {
   
@@ -33,26 +44,28 @@ int main(void) {
     scanf("%d",&estudantesrep[i]);
   }  
 
-  int alunoscad = 0;
+  //este for relacionando a matéria, a quantidade de alunos aprovados, reprovados e cadastrados
   for( i = 0; i<disciplina; i++){
-    alunoscad += testudantes[i];
-    
-    printf("\nA materia [%s], \nTeve um numero total de estudantes:[%d], \nAlunos aprovados:[%d], \nAlunos reprovados:[%d]\n",nmateria[i],testudantes[i],estudantesapp[i],estudantesrep[i]);
-    
-  
-  }
+    printf("\nSobre a matéria [%s] tem as informacoes de que:",nmateria[i]);
 
-  
-  printf("\nTotal de alunos cadastrados:[%d]\n",alunoscad);
-
-  for(i = 0; i<disciplina; i++){
-    
-    int porcentagemaprovados = (estudantesapp[i] * 1.0) / testudantes[i] * 100;
-
-    printf("\nNa materia:[%s]:\nEstudantes Aprovados:[%d],\nTotal de estudantes:[%d],\nPorcentagem de aprovados:[%d]\n",nmateria[i],estudantesapp[i],testudantes[i],porcentagemaprovados);
-
+    printf("\nO total de alunos é de:[%d]",testudantes[i]);
+    printf("\nO total de alunos aprovados é de:[%d]",estudantesapp[i]);
+    printf("\nO total de alunos reprovados é de:[%d]",estudantesrep[i]);
   }
   
+  //usando a funcao declarada acima, aqui vai ser o total de alunos, aprovados, reprovados e cadastrados.
+  int alunoscadastrados = soma(disciplina,testudantes);
+  int alunosaprovados = soma(disciplina,estudantesapp);
+  int alunosreprovados = soma(disciplina,estudantesrep);
+
+  printf("\n\n Tem as seguintes informacoes da faculdade: ");
+		
+    printf("\nO total de aluno(s) cadastrados(s) na faculdade: [%d]", alunoscadastrados);
+		
+    printf("\nA porcentagem de aluno(s) aprovado(s) na faculdade: [%d%%]", alunosaprovados * 100 / alunoscadastrados);
+		
+    printf("\nA porcentagem reprovado(s) por frequência na faculdade: [%d%%]", alunosreprovados * 100 / alunoscadastrados);
+
 
   return 0;
 }
