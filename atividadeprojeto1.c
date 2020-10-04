@@ -5,6 +5,7 @@
 
 #define disciplinamax 100;
 
+// aqui uma funcao que ela soma todos os elementos de um vetor, e depois guarda esses valores.
 int soma(int c, int *vetor) {
 	int j; 
 	int k = 0;
@@ -20,15 +21,15 @@ int soma(int c, int *vetor) {
 
 int main(void) {
   
-  int disciplina,i;
+  int disciplina,i; // quantidade de disciplinas e um contador.
   
   printf("Digite a quantidade de matérias a serem colocadas:");
   scanf("%d",&disciplina);
 
-  char nmateria[disciplina][50];
-  int testudantes[disciplina];
-  int estudantesapp[disciplina];
-  int estudantesrep[disciplina];
+  char nmateria[disciplina][50]; // variavel para o nome da materia
+  int testudantes[disciplina]; // variavel para o total de estudantes
+  int estudantesapp[disciplina]; // variavel para estudantes aprovados
+  int estudantesrep[disciplina]; // variavel para estudantes reprovados
 
   for( i = 0; i< disciplina; i++){
     printf("\nDigite o nome da matéria:");
@@ -66,6 +67,14 @@ int main(void) {
 		
     printf("\nA porcentagem reprovado(s) por frequência na faculdade: [%d%%]", alunosreprovados * 100 / alunoscadastrados);
 
+
+int Palunosaprovados = (alunosaprovados * 1.0 / alunoscadastrados) * 100;
+int alunos10 = (((alunosaprovados - 10)* 1.0 / alunoscadastrados * 100));
+
+
+for( i = 0; i<disciplina; i++){
+    int porcentagemaprovados = (estudantesapp[i] * 1.0 / testudantes[i]) * 100;
+}
 
   return 0;
 }
