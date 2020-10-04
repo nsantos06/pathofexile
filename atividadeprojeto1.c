@@ -3,7 +3,6 @@
 #include <locale.h>
 #include <stdlib.h>
 
-#define disciplinamax 100;
 
 // aqui uma funcao que ela soma todos os elementos de um vetor, e depois guarda esses valores.
 int soma(int c, int *vetor) {
@@ -74,6 +73,12 @@ int alunos10 = (((alunosaprovados - 10)* 1.0 / alunoscadastrados * 100));
 
 for( i = 0; i<disciplina; i++){
     int porcentagemaprovados = (estudantesapp[i] * 1.0 / testudantes[i]) * 100;
+
+    if(alunos10 > porcentagemaprovados){
+      
+      printf("\n A materia:[%s] teve a porcentagem menor de que:[%d%%] do total de alunos aprovados na faculdade, sendo essa porcentagem de:[%d%%]",nmateria[i],alunos10,porcentagemaprovados);
+      
+    }
 }
 
   return 0;
