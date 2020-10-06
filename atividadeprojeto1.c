@@ -88,6 +88,7 @@ for( i = 0; i<disciplina; i++){
 Exercicio 2, Letra A
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -192,7 +193,7 @@ int main() {
 		}
 	}
 
-	int aproved[x];
+	int aprovado[x];
 	int l = 0;
 	
 	for (i = 0; i < qtdalunos; ++i) {
@@ -204,7 +205,7 @@ int main() {
 		}
 
 		if (s >= 150) {
-			aproved[l] = i;
+			aprovado[l] = i;
 			++l;
 		}
 	}
@@ -224,21 +225,20 @@ int main() {
 				s2 += materias[l-1][k];	
 		}
 		
-	      if (aproved[l-1] < aproved[l]) {
-          aux = aproved[l-1];
-          aproved[l-1] = aproved[l];
-          aproved[l] = aux;
+	      if (aprovado[l-1] < aprovado[l]) {
+          aux = aprovado[l-1];
+          aprovado[l-1] = aprovado[l];
+          aprovado[l] = aux;
 	      }
 	   }
 	}
 
 	for (i = 0; i < x; ++i) {
-		int ap = aproved[i];
+		int app = aprovado[i];
 		int s = 0;
 
-		printf("\n%d. Candidado [%s] inscrito pela matricula [%d] foi Aprovado", i+1, estudante_nome[ap], Ra[ap]);
+		printf("\n%d. O candidato [%s] com matricula de numero: [%d] foi Aprovado", i+1, estudante_nome[app], Ra[app]);
 		
 	}		
   return 0;
 }
-
