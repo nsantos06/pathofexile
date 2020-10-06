@@ -95,7 +95,7 @@ Exercicio 2, Letra A
 #include <string.h>
 #include <locale.h>
 
-#define qtdalunos 2
+#define qtdalunos 100
 #define materia 3
 
 
@@ -159,10 +159,10 @@ int main() {
   int n;
   
 	for (i = 0; i < qtdalunos; ++i) {
-	  printf("\nDigite o nome do estudante [%d]: ", i);
+	  printf("\nDigite o nome do aluno [%d]: ", i);
 		scanf("\n%[^\n]", estudante_nome[i]);
 		
-	  printf("Digite a matricula do estudante [%d]: ", i);
+	  printf("Digite a matricula do aluno [%d]: ", i);
 		scanf("%s", entrada);
 		
 	
@@ -170,7 +170,7 @@ int main() {
 		Ra[i] = atoi(entrada);
 		
 		for (k = 0; k < materia; ++k) {
-			printf("Digite a nota que o aluno %s obteve no curso [%d]: ", estudante_nome[i], k+1);
+			printf("Digite a nota do aluno %s no curso [%d]: ", estudante_nome[i], k+1);
 			scanf("%s", entrada);
 			
 			n = atof(entrada);
